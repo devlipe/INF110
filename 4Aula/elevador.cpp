@@ -8,28 +8,22 @@ using namespace std;
 int main(void)
 {
     int nLeitura = 0, capacidade = 0, total = 0, entrou = 0, saiu = 0, i = 0;
-    bool resp;
+    char resp = 'N';
 
     cin >> nLeitura >> capacidade;
 
-    for (i = 1 ; i <= nLeitura ; i++)
+    for (i = 0 ; i < nLeitura ; i++)
     {
         cin >> saiu >> entrou;
         total = total - saiu + entrou;
 
         if (total > capacidade)
         {
-            resp = true;            
+            resp = 'S';            
         }
     }
-    if (resp == false)
-    {
-        cout << "N\n";
-    }
-    else
-    {
-        cout << "S\n";
-    }
+    
+    cout << resp << endl;
     
     return 0;
 }
