@@ -22,11 +22,11 @@ int main(void)
     }
     if (div == 2)
     {
-        cout << "Primo.";
+        cout << "Primo.\n";
     }
     else
     {
-        cout << "Nao primo.";
+        cout << "Nao primo.\n";
     }
     
     return 0;
