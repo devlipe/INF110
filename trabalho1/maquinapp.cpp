@@ -41,7 +41,7 @@ int main(void)
     {
         cout <<  "Produto inexistente.\n";
     }
-    else if (tPago >= preco)
+    else if (tPago >= preco) // enquanto for possivel dar um troco com valores maiores, o programa vai dar
     {
         troco = tPago - preco;
         
