@@ -1,0 +1,59 @@
+/*
+    for (int i = 0; i < numero; i++)
+    {
+        for (int j = i+1; j < i+2; j++)
+        {
+            for (int p = j+1; p < j+2; p++)
+            {
+               if (i+j+p == numero) 
+               {
+                   v = true;
+               }
+            }
+        }
+        
+    }
+*/
+
+/*  programa que determina se ele pode ser expresso como uma soma de pelo menos 2 n´umeros positivos consecutivos.
+    Felipe P Ferreira
+    16/10/2020
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numero = 0, i = 0, j = 0, p = 0;
+    bool v = false;
+    
+    cin >> numero;
+
+    while (i < numero)
+    {
+        while (j < i)
+        {
+            while (p < j)
+            {
+                if (i+j+p == numero) 
+               {
+                   v = true;
+               }
+               p++;
+            }
+            j++;
+        }
+        i++;
+    }
+    if (v)
+    {
+        cout << "SIM\n";
+    }
+    else
+    {
+        cout << "NAO\n";
+    }
+    
+    return 0;
+}
