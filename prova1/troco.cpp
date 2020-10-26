@@ -34,7 +34,7 @@ int main()
     } 
     else if (valor%c ==0)
     {
-         while (valor != 0)
+        while (valor != 0)
         {
             valor = valor - c;
             count++;
