@@ -29,7 +29,7 @@ int main()
     }
     if (pos[0][2] == pos[1][1] && pos[1][1] == pos [2][0] && pos[0][0] != 0)
     {
-        letra = pos[0][0];
+        letra = pos[0][2];
         boo = true;
     }
     if (boo == false)
