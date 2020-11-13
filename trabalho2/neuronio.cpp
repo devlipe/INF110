@@ -1,5 +1,10 @@
+/*  Programa para treino de um neoronio e teste se um emprestimo deve ser concedido ou nao  
+    Felipe P Ferreira
+    12/11/2020
+*/
+
 #include <iostream>
-#include <cmath>
+#include <cmath> // Necessario para exp()
 using namespace std;
 
 double sigmoide (double z)
@@ -31,7 +36,7 @@ void treinamento (double w[])
     {
         for (int ex = 0; ex < n; ex++)
         {
-            z = somatorio (x[0][ex], x[1][ex], w);
+            z = somatorio (x[0][ex], x[1][ex], w);  // Como sao dois valores apenas eu separei em um variavel cada na funcao somatorio
             sgm = sigmoide(z);
             erro = y[ex] - sgm;
             w[0] = w[0] + alfa * erro * (sgm * ( 1 - sgm) * x[0][ex]);
@@ -43,7 +48,7 @@ void treinamento (double w[])
 int main()
 {   
     double  w[2] = {0.5,0.5};
-    treinamento(w);
+    treinamento(w);   // Faz o treino do neoronio e devolve o w corrigido
     double slr = 0.0, emp = 0.0, z = 0.0, sgm = 0.0;
     
     cin >> slr >> emp;
