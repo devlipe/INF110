@@ -8,14 +8,15 @@
 #include <cmath>
 using namespace std;
 
-//Retorna o n´umero de ra´ızes reais de uma eq. do 2◦ grau de coeficientes a b c
-//Retorna as ra´ızes por refer^encia em x1 e x2
+//Retorna o numero de raızes reais de uma eq. do 2◦ grau de coeficientes a b c
+//Retorna as raızes por referencia em x1 e x2
 int eq2grau(double a, double b, double c, double &x1, double &x2)
 {
     double delta;
 
     delta = (b * b) - (4 * a * c);
-
+    cout << delta;
+    
     if (delta < 0)
     {
         return 0;
