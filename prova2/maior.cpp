@@ -1,28 +1,34 @@
+/*  Programa com funcao recursiva para mostrar o mairo elemento da array
+    Felipe P Ferreira
+    20/11/2020
+*/
+
 #include<iostream>
 using namespace std;
 
-int maior (int v[], int posicao, int n)
+int maior (int v[], int posicao, int n, int max)
 {
-    static int max = 0;
-    if (posicao < n)
+    if (posicao == n)
     {
-        if (max < v[posicao])
-        {
-            max = v[posicao];
-        }
-        maior(v, posicao+1, n);
+        return max;
     }
-    return max;
+    if (max < v[posicao])
+    {
+        max = v[posicao];
+    }
+    return (maior(v, posicao+1, n, max));
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
-    int v[40] = {0};
+    int n = 0;
+    cin >> n;
+    int v[n] = {0};
     
-    for (int i = 0; i < 40; i++)
+    for (int i = 0; i < n; i++)
     {
-        v[i] = i;
+        cin >> v[i];
     }
-    cout << maior(v, 0, 40);
+    cout << maior(v, 0, n, v[0]) << endl;
     return 0;
 }
