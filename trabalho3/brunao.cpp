@@ -120,7 +120,7 @@ void exibirInformacoesSigno(int signo){
     }
 }
 
-int perguntarDia(int mes, char mesNome[]){
+int  perguntarDia(int mes, char mesNome[]){
     int dia;
     char resposta[200];
     char mesMaiusculo[50];
