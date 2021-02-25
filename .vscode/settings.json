@@ -5,5 +5,8 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "istream": "cpp"
-    }
+    },
+    "editor.fontFamily": "Cartograph CF",
+    "editor.fontSize": 14,
+    "editor.cursorStyle": "underline"
 }
